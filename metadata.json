@@ -1,0 +1,8 @@
+{
+  "name": "NEXUS \u2014 Investigation Intelligence Platform",
+  "description": "Secure investigation intelligence platform for authorized investigative workflows.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

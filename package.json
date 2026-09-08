@@ -1,0 +1,46 @@
+{
+  "name": "nexus-investigation-platform",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "server": "node server.js",
+    "db:seed": "node scripts/seed-postgres.js",
+    "dev:full": "node server.js & vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --port=3000 --host=0.0.0.0",
+    "clean": "node -e \"const fs=require('fs'); for(const p of ['dist','server.js']) { if(fs.existsSync(p)&&p==='dist') fs.rmSync(p,{recursive:true,force:true}); }\"",
+    "lint": "tsc --noEmit",
+    "db:migrate": "node scripts/migrate-postgres.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.4.0",
+    "@simplewebauthn/browser": "^14.0.0",
+    "@simplewebauthn/server": "^13.0.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "@types/d3": "^7.4.3",
+    "@vitejs/plugin-react": "^5.0.4",
+    "d3": "^7.9.0",
+    "dotenv": "^17.4.2",
+    "express": "^4.21.2",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "pg": "^8.16.3",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.1.14",
+    "tsx": "^4.21.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3"
+  }
+}

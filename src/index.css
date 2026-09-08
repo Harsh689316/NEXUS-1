@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main:#050908; --bg-card:#09120d; --bg-card-elevated:#0d1a12; --bg-sidebar:#06100a; --bg-header:#07110b;
+    --text-primary:#e8f5ec; --text-secondary:#8ea99a; --text-muted:#5d7666; --border-main:#183423; --border-light:#10251a;
+    --navy-primary:#37ff85; --olive-secondary:#76a886; --khaki-muted:#8ba997; --accent-amber:#fbbf24; --badge-bg:#0d1d14;
+    --accent-green:#37ff85; --accent-red:#ff6b6b; --accent-blue:#55d6ff; --accent-purple:#c084fc;
+  }
+  html,body,#root { min-height:100%; }
+  body { background:var(--bg-main); color:var(--text-primary); font-family:"Inter","IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; min-height:100vh; letter-spacing:.01em; }
+  * { scrollbar-width:thin; scrollbar-color:#254a32 transparent; }
+  button,input,select,textarea { font:inherit; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 140, 140, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 140, 140, 0.5);
+}
+
